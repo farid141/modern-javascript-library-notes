@@ -13,9 +13,10 @@ komponen:
 
 const {userId, redirectSignIn} = auth()
 
-It sounds like you're asking about using **Clerk** (the authentication service) to implement **role-permission based authorization** — is that correct?
-
-Let me break it down:
+sinkronisasi user clerk:
+gunakan fungsi currentUser() untuk ambil info user dari db clerk
+- menggunakan fungsi pada komponen FE akan mengecek id clerk, jika tidak ada, insert
+- menggunakan websocket
 
 - **Clerk** mainly handles **authentication**: signing up users, signing in users, verifying emails, managing sessions, etc.
 - **Authorization** (specifically **role-permission** based) is about **what a user can do** once they're authenticated: which pages they can access, what actions they can perform.
